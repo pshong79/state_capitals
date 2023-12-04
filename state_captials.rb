@@ -57,6 +57,11 @@ while states_and_capitals.size > 0 do
   state_keys = states_and_capitals.keys
   state = state_keys[rand(state_keys.size)]
 
+  puts "States will be selected at random."
+  puts "If the capital entered is incorrect, it will continue at random and the incorrect state will be presented again in the future."
+  puts "All the capitals must be correctly answered before this application will end."
+  puts "Press \"ctrl+c\" to quit at any time.\n\n"
+
   print "What is the capital of #{state}? "
   user_capital = gets.chomp
 
@@ -66,7 +71,7 @@ while states_and_capitals.size > 0 do
     states_and_capitals.size
     puts "Correct! #{user_capital.downcase}, #{state}. #{answered.size}/50 done."
   else
-    puts "Incorrect. Try again."
+    puts "Incorrect. We will come back to that one."
   end
 end
 puts "All done. Good job!"
