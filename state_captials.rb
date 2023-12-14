@@ -51,6 +51,12 @@ states_and_capitals = {
   wyoming: "cheyenne"
 }
 
+CAPITALS = [ "albany", "annapolis", "atlanta", "augusta", "austin", "baton rouge", "bismark", "boise", "boston", "carson city", 
+             "charleston", "cheyenne", "columbia", "columbus", "concord", "denver", "des moines", "dover", "frankfort", "harrisburg",
+             "hartford", "helena", "honolulu", "indianapolis", "jackson", "jefferson city", "juneau", "lansing", "lincoln", "little rock", 
+             "madison", "montgomery", "montpelier", "nashville", "oklahoma city", "olympia", "phoenix", "pierre", "providence", "raleigh",
+             "richmond", "sacramento", "salem", "salt lake city", "santa fe", "springfield", "st. paul", "tallahassee", "topeka", "trenton" ]
+
 answered = {}
 
 puts "States will be selected at random."
@@ -62,6 +68,7 @@ while states_and_capitals.size > 0 do
   state_keys = states_and_capitals.keys
   state = state_keys[rand(state_keys.size)]
   
+  puts "Here is a list of all the state capitals: #{CAPITALS}."
   print "What is the capital of #{state}? "
   user_capital = gets.chomp
 
