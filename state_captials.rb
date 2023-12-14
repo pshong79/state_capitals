@@ -57,7 +57,8 @@ CAPITALS = [ "albany", "annapolis", "atlanta", "augusta", "austin", "baton rouge
              "madison", "montgomery", "montpelier", "nashville", "oklahoma city", "olympia", "phoenix", "pierre", "providence", "raleigh",
              "richmond", "sacramento", "salem", "salt lake city", "santa fe", "springfield", "st. paul", "tallahassee", "topeka", "trenton" ]
 
-answered = {}
+correct_answers = {}
+wrong_answers = {}
 
 puts "States will be selected at random."
 puts "If the capital entered is incorrect, it will continue at random and the incorrect state will be presented again in the future."
@@ -68,17 +69,19 @@ while states_and_capitals.size > 0 do
   state_keys = states_and_capitals.keys
   state = state_keys[rand(state_keys.size)]
   
-  puts "Here is a list of all the state capitals: #{CAPITALS}."
+  puts "Here is a list of all the state capitals:\n#{CAPITALS}.\n\n"
   print "What is the capital of #{state}? "
   user_capital = gets.chomp
 
   if user_capital.downcase == states_and_capitals[state]
-    answered[state] = states_and_capitals[state]
-    states_and_capitals.delete(state)
-    states_and_capitals.size
-    puts "Correct! #{user_capital.downcase}, #{state}. #{answered.size}/50 done."
+    correct_answers[state] = states_and_capitals[state]
+    puts "Correct! #{user_capital.downcase}, #{state}. #{correct_answers.size}/50 correct.\n\n"
   else
-    puts "Incorrect. We will come back to that one."
+    wrong_answers[state] = states_and_capitals[state]
+    puts "Incorect. The correct answer is #{states_and_capitals[state]}. Your answer was #{user_capital}.\n\n"
   end
+
+  states_and_capitals.delete(state)
+  states_and_capitals.size
 end
-puts "All done. Good job!"
+puts "All done. You got #{correct_answers.size}/50 correct.\n\n"
