@@ -16,12 +16,15 @@ $ ruby state_capitals.rb
 ```
 
 ### Change log:
-#### Version 1: December 3, 2023
-* Initial version release
-* Asks user for the state capital. If user answers incorrectly, user is asked for the capital of said state again later.
-* Keeps count of correct answers. When 50/50 is reached, program ends.
+#### Version 2.1: December 14, 2023
+* Remove the capital from the list if answered correctly.
 
 #### Version 2: December 13, 2023
 * Updated so all state capitals are displayed every time a question is asked.
 * If incorrect answer is given, correct answer is given. The capital for the state is not asked for again.
 * Program ends after capitals for all 50 states have been asked for. When program ends, count of correct responses is displayed.
+
+#### Version 1: December 3, 2023
+* Initial version release
+* Asks user for the state capital. If user answers incorrectly, user is asked for the capital of said state again later.
+* Keeps count of correct answers. When 50/50 is reached, program ends.
