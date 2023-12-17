@@ -75,15 +75,15 @@ while states_and_capitals.size > 0 do
 
   if user_capital.downcase == states_and_capitals[state]
     correct_answers[state] = states_and_capitals[state]
+    states_and_capitals.delete(state)
+    capitals.delete(user_capital)
 
     puts "Correct! #{user_capital.downcase}, #{state}. #{correct_answers.size}/50 correct.\n\n"
   else
     wrong_answers[state] = states_and_capitals[state]
-    puts "Incorect. The correct answer is #{states_and_capitals[state]}. Your answer was #{user_capital}.\n\n"
+    puts "Incorrect. The correct answer is #{states_and_capitals[state]}. We will come back to this again later. "
   end
 
-  states_and_capitals.delete(state)
-  capitals.delete(user_capital)
   states_and_capitals.size
 end
 puts "All done. You got #{correct_answers.size}/50 correct.\n\n"

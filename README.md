@@ -16,6 +16,10 @@ $ ruby state_capitals.rb
 ```
 
 ### Change log:
+#### Versin 2.2: December 17, 2023
+* Continue to remove capital from list if answered correctly.
+* If answered incorrectly, correct answer is given and user will be asked for the capital of said state again later.
+
 #### Version 2.1: December 14, 2023
 * Remove the capital from the list if answered correctly.
 
